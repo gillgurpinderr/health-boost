@@ -12,9 +12,19 @@
   flex-direction: column;
 }
 
+@media screen and (min-width: 600px) {
+  .auth-form-container {
+    padding: 5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+}
+
 label {
   text-align: left;
   padding: 0.25rem 0;
+  color: white;
 }
 
 input {
@@ -24,12 +34,17 @@ input {
   border-radius: 10px;
 }
 
+.heading {
+  color: white;
+}
+
 button {
   border: none;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 .link-btn {

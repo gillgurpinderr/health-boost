@@ -9,13 +9,15 @@ export const Register = (props) => {
         e.preventDefault();
         console.log(email);
         console.log(pass);
+        console.log(name);
     }
 
     return (
         <div className="auth-form-container">
+            <h1 className="heading"> Register page </h1>
             <form className="register-form" onSubmit={handleSubmit}>
                 <label htmlFor="name"> Full name: </label>
-                <input value={name} name="name" id="name" placeholder="full name" />
+                <input value={name} onChange={(e) => setName(e.target.value)} name="name" id="name" placeholder="full name" />
                 <label htmlfor="email"> Email: </label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email@address.com" id="email" name="email" />
                 <label htmlfor="password"> Password: </label>

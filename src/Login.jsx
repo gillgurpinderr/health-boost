@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from 'react-router-dom';
 
 export const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -9,8 +10,10 @@ export const Login = (props) => {
         console.log(email);
         console.log(pass);
     }
+
     return (
         <div className="auth-form-container">
+            <h1 className="heading"> Login page </h1>
             <form className="login-form" onSubmit={handleSubmit}>
                 <label htmlfor="email"> Email: </label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email@address.com" id="email" name="email" />
